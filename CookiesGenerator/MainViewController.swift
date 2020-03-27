@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKHTTPCookieStoreObserver {
+class MainViewController: UIViewController, WKHTTPCookieStoreObserver {
 
   @IBOutlet var webview: WKWebView!
   
@@ -29,7 +29,7 @@ class ViewController: UIViewController, WKHTTPCookieStoreObserver {
       HTTPCookiePropertyKey.value: "1234",
       HTTPCookiePropertyKey.path: "/",
       HTTPCookiePropertyKey.secure: true,
-      HTTPCookiePropertyKey.name: "footok"
+      HTTPCookiePropertyKey.name: "footok`"
     ])
     
     HTTPCookieStorage.shared.setCookie(cookie!)

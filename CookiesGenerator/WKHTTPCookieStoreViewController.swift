@@ -1,24 +1,27 @@
 //
-//  CookiesReaderViewController.swift
-//  CookiesGenerator
+//  WKHTTPCookieStoreViewController.swift
+//  CookieMonster
 //
-//  Created by Stephen Yao on 27/3/20.
+//  Created by Stephen Yao on 28/3/20.
 //  Copyright © 2020 silverbear. All rights reserved.
 //
 
 import UIKit
+import WebKit
 
-final class CookiesReaderViewController: UITableViewController {
+final class WKHTTPCookieStoreViewController: UITableViewController {
   
   var cookies: [HTTPCookie] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseID")
     
-    let cookies = HTTPCookieStorage.shared.cookies!.compactMap { $0 }
-    self.cookies = cookies    
-    tableView.reloadData()
+    WKWebsiteDataStore.default().httpCookieStore.getAllCookies {
+      self.cookies = $0
+      self.tableView.reloadData()
+    }
   }
   
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,4 +40,7 @@ final class CookiesReaderViewController: UITableViewController {
     return cell!
   }
   
+  @IBAction func closeButtonTapped(_ sender: Any) {
+    self.presentingViewController?.dismiss(animated: true, completion: nil)
+  }
 }

@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		DD2AEB3E242D899100613639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AEB3D242D899100613639 /* AppDelegate.swift */; };
 		DD2AEB40242D899100613639 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AEB3F242D899100613639 /* SceneDelegate.swift */; };
-		DD2AEB42242D899100613639 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AEB41242D899100613639 /* ViewController.swift */; };
+		DD2AEB42242D899100613639 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AEB41242D899100613639 /* MainViewController.swift */; };
 		DD2AEB45242D899100613639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2AEB43242D899100613639 /* Main.storyboard */; };
 		DD2AEB47242D899500613639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2AEB46242D899500613639 /* Assets.xcassets */; };
 		DD2AEB4A242D899500613639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2AEB48242D899500613639 /* LaunchScreen.storyboard */; };
-		DD2AEB52242D89F100613639 /* CookiesReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AEB51242D89F100613639 /* CookiesReaderViewController.swift */; };
+		DD2AEB52242D89F100613639 /* HTTPCookieStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2AEB51242D89F100613639 /* HTTPCookieStoreViewController.swift */; };
+		DD735353242E316800EC5AEA /* WKHTTPCookieStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD735352242E316800EC5AEA /* WKHTTPCookieStoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD2AEB3A242D899100613639 /* CookiesGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookiesGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2AEB3A242D899100613639 /* CookieMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2AEB3D242D899100613639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD2AEB3F242D899100613639 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD2AEB41242D899100613639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD2AEB41242D899100613639 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DD2AEB44242D899100613639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD2AEB46242D899500613639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD2AEB49242D899500613639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD2AEB4B242D899500613639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD2AEB51242D89F100613639 /* CookiesReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiesReaderViewController.swift; sourceTree = "<group>"; };
+		DD2AEB51242D89F100613639 /* HTTPCookieStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCookieStoreViewController.swift; sourceTree = "<group>"; };
+		DD735352242E316800EC5AEA /* WKHTTPCookieStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKHTTPCookieStoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,7 @@
 		DD2AEB3B242D899100613639 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD2AEB3A242D899100613639 /* CookiesGenerator.app */,
+				DD2AEB3A242D899100613639 /* CookieMonster.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,12 +62,13 @@
 			children = (
 				DD2AEB3D242D899100613639 /* AppDelegate.swift */,
 				DD2AEB3F242D899100613639 /* SceneDelegate.swift */,
-				DD2AEB41242D899100613639 /* ViewController.swift */,
+				DD2AEB41242D899100613639 /* MainViewController.swift */,
+				DD2AEB51242D89F100613639 /* HTTPCookieStoreViewController.swift */,
+				DD735352242E316800EC5AEA /* WKHTTPCookieStoreViewController.swift */,
 				DD2AEB43242D899100613639 /* Main.storyboard */,
 				DD2AEB46242D899500613639 /* Assets.xcassets */,
 				DD2AEB48242D899500613639 /* LaunchScreen.storyboard */,
 				DD2AEB4B242D899500613639 /* Info.plist */,
-				DD2AEB51242D89F100613639 /* CookiesReaderViewController.swift */,
 			);
 			path = CookiesGenerator;
 			sourceTree = "<group>";
@@ -73,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD2AEB39242D899100613639 /* CookiesGenerator */ = {
+		DD2AEB39242D899100613639 /* CookieMonster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD2AEB4E242D899500613639 /* Build configuration list for PBXNativeTarget "CookiesGenerator" */;
+			buildConfigurationList = DD2AEB4E242D899500613639 /* Build configuration list for PBXNativeTarget "CookieMonster" */;
 			buildPhases = (
 				DD2AEB36242D899100613639 /* Sources */,
 				DD2AEB37242D899100613639 /* Frameworks */,
@@ -85,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = CookiesGenerator;
+			name = CookieMonster;
 			productName = CookiesGenerator;
-			productReference = DD2AEB3A242D899100613639 /* CookiesGenerator.app */;
+			productReference = DD2AEB3A242D899100613639 /* CookieMonster.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD2AEB35242D899100613639 /* Build configuration list for PBXProject "CookiesGenerator" */;
+			buildConfigurationList = DD2AEB35242D899100613639 /* Build configuration list for PBXProject "CookieMonster" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD2AEB39242D899100613639 /* CookiesGenerator */,
+				DD2AEB39242D899100613639 /* CookieMonster */,
 			);
 		};
 /* End PBXProject section */
@@ -141,8 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD2AEB42242D899100613639 /* ViewController.swift in Sources */,
-				DD2AEB52242D89F100613639 /* CookiesReaderViewController.swift in Sources */,
+				DD735353242E316800EC5AEA /* WKHTTPCookieStoreViewController.swift in Sources */,
+				DD2AEB42242D899100613639 /* MainViewController.swift in Sources */,
+				DD2AEB52242D89F100613639 /* HTTPCookieStoreViewController.swift in Sources */,
 				DD2AEB3E242D899100613639 /* AppDelegate.swift in Sources */,
 				DD2AEB40242D899100613639 /* SceneDelegate.swift in Sources */,
 			);
@@ -323,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD2AEB35242D899100613639 /* Build configuration list for PBXProject "CookiesGenerator" */ = {
+		DD2AEB35242D899100613639 /* Build configuration list for PBXProject "CookieMonster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD2AEB4C242D899500613639 /* Debug */,
@@ -332,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD2AEB4E242D899500613639 /* Build configuration list for PBXNativeTarget "CookiesGenerator" */ = {
+		DD2AEB4E242D899500613639 /* Build configuration list for PBXNativeTarget "CookieMonster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD2AEB4F242D899500613639 /* Debug */,
