@@ -37,37 +37,46 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-Hj-1e4">
-                                <rect key="frame" x="109" y="406" width="196" height="30"/>
+                                <rect key="frame" x="109" y="258" width="196" height="30"/>
                                 <state key="normal" title="Print cookies in WKWebView"/>
                                 <connections>
                                     <action selector="printCookiesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S7H-Db-iSG"/>
                                 </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fR-E6-MeO">
-                                <rect key="frame" x="87" y="258" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="308" width="414" height="300"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="PaG-R3-bQA"/>
+                                    <constraint firstAttribute="height" constant="300" id="PaG-R3-bQA"/>
                                 </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stC-p9-pee">
+                                <rect key="frame" x="125.5" y="628" width="163" height="30"/>
+                                <state key="normal" title="Load webview with URL"/>
+                                <connections>
+                                    <action selector="loadWebviewURLButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BVr-Gk-nAb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="4fR-E6-MeO" firstAttribute="top" secondItem="DSf-Hj-1e4" secondAttribute="bottom" constant="20" id="COy-LN-PeI"/>
                             <constraint firstItem="B4e-xv-dcu" firstAttribute="top" secondItem="epy-F9-ftY" secondAttribute="bottom" constant="20" id="FlR-9x-ga3"/>
                             <constraint firstItem="0ip-f5-9T8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JCC-Uf-Ja3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4fR-E6-MeO" secondAttribute="trailing" constant="87" id="KT7-Zf-xuc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4fR-E6-MeO" secondAttribute="trailing" id="KT7-Zf-xuc"/>
                             <constraint firstItem="DSf-Hj-1e4" firstAttribute="centerX" secondItem="4fR-E6-MeO" secondAttribute="centerX" id="NMw-ca-EDK"/>
                             <constraint firstItem="epy-F9-ftY" firstAttribute="top" secondItem="0ip-f5-9T8" secondAttribute="bottom" constant="20" id="PSJ-xp-tbd"/>
+                            <constraint firstItem="DSf-Hj-1e4" firstAttribute="top" secondItem="B4e-xv-dcu" secondAttribute="bottom" constant="20" id="PTB-TF-EmZ"/>
                             <constraint firstItem="B4e-xv-dcu" firstAttribute="centerX" secondItem="epy-F9-ftY" secondAttribute="centerX" id="Vje-n8-yMf"/>
-                            <constraint firstItem="DSf-Hj-1e4" firstAttribute="top" secondItem="4fR-E6-MeO" secondAttribute="bottom" constant="20" id="qX3-rd-0NU"/>
+                            <constraint firstItem="stC-p9-pee" firstAttribute="top" secondItem="4fR-E6-MeO" secondAttribute="bottom" constant="20" id="W4R-OV-D0z"/>
+                            <constraint firstItem="stC-p9-pee" firstAttribute="centerX" secondItem="4fR-E6-MeO" secondAttribute="centerX" id="n89-t1-wS9"/>
                             <constraint firstItem="epy-F9-ftY" firstAttribute="centerX" secondItem="0ip-f5-9T8" secondAttribute="centerX" id="sft-nJ-e9r"/>
-                            <constraint firstItem="4fR-E6-MeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="vaF-4S-EQd"/>
+                            <constraint firstItem="4fR-E6-MeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vaF-4S-EQd"/>
                             <constraint firstItem="0ip-f5-9T8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xUW-xW-pAa"/>
-                            <constraint firstItem="4fR-E6-MeO" firstAttribute="top" secondItem="B4e-xv-dcu" secondAttribute="bottom" constant="20" id="ytE-gG-toC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

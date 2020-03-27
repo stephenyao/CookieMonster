@@ -16,7 +16,7 @@ class MainViewController: UIViewController, WKHTTPCookieStoreObserver {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-    let request = URLRequest(url: URL(string: "https://www.facebook.com")!)
+    let request = URLRequest(url: URL(string: "https://www.google.com")!)
     webview.load(request)
     WKWebsiteDataStore.default().httpCookieStore.add(self)
   }
@@ -65,6 +65,28 @@ class MainViewController: UIViewController, WKHTTPCookieStoreObserver {
     }
   }
 
+  @IBAction func loadWebviewURLButtonTapped(_ sender: Any) {
+    let alert = UIAlertController(title: "URL input", message: nil, preferredStyle: .alert)
+    alert.addTextField { (textField) in
+      textField.text = "https://www."
+    }
+    
+    let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+      guard
+        let textField = alert.textFields?.first,
+        let text = textField.text,
+        let url = URL(string: text) else {
+        return
+      }
+      self.webview.load(URLRequest(url: url))
+    }
+    
+    alert.addAction(cancel)
+    alert.addAction(ok)
+    present(alert, animated: true, completion: nil)
+  }
+  
   func cookiesDidChange(in cookieStore: WKHTTPCookieStore) {
     print("***************cookies did change!")
     cookieStore.getAllCookies { cookies in
