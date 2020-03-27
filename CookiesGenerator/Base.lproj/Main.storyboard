@@ -16,8 +16,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ip-f5-9T8">
-                                <rect key="frame" x="150.5" y="108" width="113" height="30"/>
-                                <state key="normal" title="Generate cookie"/>
+                                <rect key="frame" x="79" y="108" width="256" height="30"/>
+                                <state key="normal" title="Generate cookie in HTTPCookieStore"/>
                                 <connections>
                                     <action selector="generateCookieButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZB-mK-KsE"/>
                                 </connections>

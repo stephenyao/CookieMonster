@@ -14,10 +14,7 @@ class MainViewController: UIViewController, WKHTTPCookieStoreObserver {
   @IBOutlet var webview: WKWebView!
   
   override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
-    let request = URLRequest(url: URL(string: "https://www.google.com")!)
-    webview.load(request)
+    super.viewDidLoad()    
     WKWebsiteDataStore.default().httpCookieStore.add(self)
   }
   
