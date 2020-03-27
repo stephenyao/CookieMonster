@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZrA-zS-fZo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,128 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CookiesGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ip-f5-9T8">
+                                <rect key="frame" x="150.5" y="108" width="113" height="30"/>
+                                <state key="normal" title="Generate cookie"/>
+                                <connections>
+                                    <action selector="generateCookieButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZB-mK-KsE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epy-F9-ftY">
+                                <rect key="frame" x="146.5" y="158" width="121" height="30"/>
+                                <state key="normal" title="Delete all cookies"/>
+                                <connections>
+                                    <action selector="deleteAllCookiesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeZ-1H-gqm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4e-xv-dcu">
+                                <rect key="frame" x="161.5" y="208" width="91" height="30"/>
+                                <state key="normal" title="Sync cookies"/>
+                                <connections>
+                                    <action selector="syncCookiesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDR-dC-7SI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-Hj-1e4">
+                                <rect key="frame" x="109" y="406" width="196" height="30"/>
+                                <state key="normal" title="Print cookies in WKWebView"/>
+                                <connections>
+                                    <action selector="printCookiesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S7H-Db-iSG"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fR-E6-MeO">
+                                <rect key="frame" x="87" y="258" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PaG-R3-bQA"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B4e-xv-dcu" firstAttribute="top" secondItem="epy-F9-ftY" secondAttribute="bottom" constant="20" id="FlR-9x-ga3"/>
+                            <constraint firstItem="0ip-f5-9T8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JCC-Uf-Ja3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4fR-E6-MeO" secondAttribute="trailing" constant="87" id="KT7-Zf-xuc"/>
+                            <constraint firstItem="DSf-Hj-1e4" firstAttribute="centerX" secondItem="4fR-E6-MeO" secondAttribute="centerX" id="NMw-ca-EDK"/>
+                            <constraint firstItem="epy-F9-ftY" firstAttribute="top" secondItem="0ip-f5-9T8" secondAttribute="bottom" constant="20" id="PSJ-xp-tbd"/>
+                            <constraint firstItem="B4e-xv-dcu" firstAttribute="centerX" secondItem="epy-F9-ftY" secondAttribute="centerX" id="Vje-n8-yMf"/>
+                            <constraint firstItem="DSf-Hj-1e4" firstAttribute="top" secondItem="4fR-E6-MeO" secondAttribute="bottom" constant="20" id="qX3-rd-0NU"/>
+                            <constraint firstItem="epy-F9-ftY" firstAttribute="centerX" secondItem="0ip-f5-9T8" secondAttribute="centerX" id="sft-nJ-e9r"/>
+                            <constraint firstItem="4fR-E6-MeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="vaF-4S-EQd"/>
+                            <constraint firstItem="0ip-f5-9T8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xUW-xW-pAa"/>
+                            <constraint firstItem="4fR-E6-MeO" firstAttribute="top" secondItem="B4e-xv-dcu" secondAttribute="bottom" constant="20" id="ytE-gG-toC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="H5P-07-nLy">
+                        <barButtonItem key="rightBarButtonItem" title="HTTP Cookie Jar" id="MVq-HD-LXb">
+                            <connections>
+                                <segue destination="r82-hD-afM" kind="show" id="rNp-b2-626"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webview" destination="4fR-E6-MeO" id="Vj2-sq-vXn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="134.59821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bh6-il-5kY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZrA-zS-fZo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZfQ-Za-0eT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nXe-P4-yya"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1I-8e-j3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="134.59821428571428"/>
+        </scene>
+        <!--Cookie Jar-->
+        <scene sceneID="ds8-A5-AyN">
+            <objects>
+                <tableViewController title="Cookie Jar" id="r82-hD-afM" customClass="CookiesReaderViewController" customModule="CookiesGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0fo-TO-4kt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VYb-f2-QDd">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VYb-f2-QDd" id="4qE-Br-qar">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="r82-hD-afM" id="Mqs-Sa-obp"/>
+                            <outlet property="delegate" destination="r82-hD-afM" id="zxM-bx-UWB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cookie Jar" id="I5q-sJ-B7H"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0d-RI-W7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="135"/>
         </scene>
     </scenes>
 </document>
